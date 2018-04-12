@@ -26,7 +26,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="#">Facebook</a>
             <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="./blog">Blog</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
           </div>
         </div>
       </nav>
@@ -41,7 +41,7 @@
           <p>
             <a href="mailto:heunghari@naver.com" class="btn btn-primary my-2">Click here to email me!</a>
           </p>
-            <div> <a href="./blog">* Click here to go to the 'Blog' page ! </a> </div>
+            <div><a href="{% url 'allblogs' %}">* Click here to go to the 'Blog' page !</a></div>
         </div>
       </section>
 
