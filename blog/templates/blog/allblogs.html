@@ -18,7 +18,7 @@
 
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="../">Junnie Lee</a>
+          <a class="navbar-brand" href="{% url 'home' %}">Junnie Lee</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -55,7 +55,7 @@
         {% for blogpost in blogposts.all %} <!-- we brought the 'blogposts' object from the views file! -->
         <div class="blog-post">
             <strong class="d-inline-block mb-2 text-primary">blog post no. #{{ blogpost.id }}</strong>
-            <a href=""><h2 class="blog-post-title font-italic">{{ blogpost.title }}</h2></a>
+            <a href="{% url 'blogpostdetails' pk=blogpost.pk %}"><h2 class="blog-post-title font-italic">{{ blogpost.title }}</h2></a>
             <p class="blog-post-meta">- Date: {{ blogpost.pub_date_pretty }} </p>
             <img class="img-fluid" src="{{ blogpost.image.url }}" height=200 width=200 />
             <br />
