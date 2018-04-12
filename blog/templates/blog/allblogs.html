@@ -55,11 +55,11 @@
         {% for blogpost in blogposts.all %} <!-- we brought the 'blogposts' object from the views file! -->
         <div class="blog-post">
             <strong class="d-inline-block mb-2 text-primary">blog post no. #{{ blogpost.id }}</strong>
-            <h2 class="blog-post-title font-italic">{{ blogpost.title }}</h2>
-            <p class="blog-post-meta">- Date: {{ blogpost.pub_date }} </p>
-            <img src="{{ blogpost.image.url }}" />
+            <a href=""><h2 class="blog-post-title font-italic">{{ blogpost.title }}</h2></a>
+            <p class="blog-post-meta">- Date: {{ blogpost.pub_date_pretty }} </p>
+            <img class="img-fluid" src="{{ blogpost.image.url }}" height=200 width=200 />
             <br />
-              <p>{{ blogpost.body }}</p>
+              <p>{{ blogpost.summary }}</p>
             <hr />            
         </div>  
         {% endfor %}
