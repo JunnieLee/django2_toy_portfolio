@@ -54,9 +54,9 @@
             {% for job in jobs.all %} <!-- we brought the 'jobs' object from the views file! -->
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url }}" />
+                <a href="{% url 'jobs_detail' pk=job.pk %}"><img class="card-img-top" src="{{ job.image.url }}" /></a>
                 <div class="card-body">
-                  <p class="card-text">{{ job.summary }}</p>
+                  <a href="{% url 'jobs_detail' pk=job.pk %}"><p class="card-text">{{ job.summary }}</p></a>
                 </div>
               </div>
             </div>
